@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flyte</title>
+    <!-- favicon CSS -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alice" rel="stylesheet">
+    <!-- custom fonts -->
+    <link href="fonts/aileron.css" rel="stylesheet">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="css/plugins.min.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/app.css">
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body class="" data-spy="scroll" data-target="#navbar-nav">
+
+    <!-- =========== Preloader Start ============ -->
+    <div class="preloader-main">
+        <div class="preloader-wapper">
+            <svg class="preloader" xmlns="http://www.w3.org/2000/svg" version="1.1" width="600" height="200">
+                <defs>
+                    <filter id="goo" x="-40%" y="-40%" height="200%" width="400%">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -8" result="goo" />
+                    </filter>
+                </defs>
+                <g filter="url(#goo)">
+                    <circle class="dot bg-fill-primary " cx="50" cy="50" r="25" />
+                    <circle class="dot" cx="50" cy="50" r="25" fill="#4c83ff" />
+                </g>
+            </svg>
+            <div>
+                <div class="loader-section section-left"></div>
+                <div class="loader-section section-right"></div>
+            </div>
+        </div>
+    </div>
+    <!-- =========== Preloader End ============ -->
+    
+    <div class="main">
+
+        <!-- =========== Start of Navigation (main menu) ============ -->
+        <header class="navbar navbar-sticky navbar-expand-lg navbar-light">
+            <div class="container position-relative">
+                <a class="navbar-brand mr-70" href="index.html">
+                    <img class="navbar-brand__regular" src="img/brand-logo-color.png" alt="brand-logo">
+                    <img class="navbar-brand__sticky" src="img/brand-logo-color.png" alt="sticky brand-logo">
+                </a>
+                <!--  End of brand logo -->
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="navbarToggler" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- end of Nav toggler -->
+
+                <div class="navbar-inner mr-auto">
+                    <!--  Nav close button inside off-canvas/ mobile menu -->
+                    <button class="navbar-toggler d-lg-none" type="button" data-toggle="navbarToggler" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!-- end of Nav Toggoler -->
+                    <nav>
+                       <ul class="navbar-nav" id="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#login">Order Now</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#reviews">Reviews</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#pricing">Client</a>
+                            </li>
+                            <!-- <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="javascript:;" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Pages
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="javascript:;">Blog Classic</a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a class="dropdown-item" href="blog-sidebar-right.html">Sidebar Right</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="blog-sidebar-Left.html">Sidebar Left</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="blog-grid-2-col-sidebar-right.html">2 Columns Sidebar Right</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="blog-grid-2-col-sidebar-left.html">2 Columns Sidebar Left</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="blog-full.html">Full Width</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="javascript:;">Blog Card</a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a class="dropdown-item" href="blog-card-2-col.html">Card 2 Columns</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="blog-card-3-col.html">Card 3 Columns</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="blog-card-full.html">Card Full Width</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="javascript:;">Blog List</a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a class="dropdown-item" href="blog-list-sidebar-right.html">List Sidebar Rigt</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="blog-list-sidebar-left.html">List Sidebar Left</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="blog-list-full.html">List Full Width</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="javascript:;">Blog
+                                            Details</a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a class="dropdown-item" href="blog-details-sidebar-right.html">Blog Details Sidebar Right</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="blog-details-sidebar-left.html">Blog Details Sidebar Left</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="blog-details-full.html">Blog Details Full</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="javascript:;">Accounts</a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a class="dropdown-item" href="login.html">Login</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="signup.html">Signup</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="recover-account.html">Recover Account</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="javascript:;">Specialty Pages</a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a class="dropdown-item" href="coming-soon.html">Comming Soon</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="download.html">Download</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="subscribe-confirmation.html">Subscribe Confirmation</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="maintenance.html">Maintenance</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="error-404.html">Error 404</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="reviews.html">Reviews</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="pricing.html">Pricing</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="faq.html">FAQ</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="contact.html">Contact</a>
+                                    </li>
+                                </ul>
+                            </li> -->
+                        </ul>
+                        <!-- end of nav menu items -->
+                    </nav> 
+                </div>
+            </div>
+            <!-- end of container -->
+        </header>
+        <!-- =========== End of Navigation (main menu)  ============ -->
+        <!-- =========== Start of Hero ============ -->
+        <section class="space-bottom--md hero">
+            <div class="background-holder background-holder--auto background-holder--left-top">
+                <img src="img/hero-dots.png" alt="hero-dots" class="background-image-holder ">
+            </div>
+            <!-- end of dots background -->
+
+            <div class="container">
+                <div class="row align-items-lg-center flex-lg-row-reverse flex-xl-row">
+                    <div class="col-12 col-lg-6 d-xl-none">
+                        <div class="hero__block5-mobile background-holder--cover background-holder--center d-xl-none mx-auto mb-30">
+                            <img src="img/hero-5-mobile.png" alt="oval" class="background-image-holder ">
+                        </div>
+                    </div>
+                    <!-- this image only visible on mobile -->
+                    <!-- end of mobile media image -->
+    
+                    <div class="col-12 col-lg-6 col-xl-5 z-index1">
+                        <div class="d-lg-flex align-items-lg-center position-relative">
+                            <div class="hero-content">
+                                <div class="d-flex align-items-center justify-content-center  justify-content-lg-start mb-3">
+                                    <span class="rating__star mr-10">
+                                        <i class="icon icon-favourite-31 active"></i>
+                                        <i class="icon icon-favourite-31 active"></i>
+                                        <i class="icon icon-favourite-31 active"></i>
+                                        <i class="icon icon-favourite-31 active"></i>
+                                        <i class="icon icon-favourite-31"></i>
+                                    </span>
+                                    <span class="mr-10">4.7 of 5 on</span>
+                                    <img src="img/time2.png" alt="logo-rating">
+
+                                </div>
+                                <h1 class="hero__title font-w-900 mb-40">Quality Food for Students Easy, Quick, Cheap.
+                                </h1>
+                                <div class="button-group align-items-center justify-content-sm-center justify-content-lg-start mt-30">
+                                    <a href="#" class="btn btn--bg-primary btn--sm rounded-full btn-3d-hover btn-splash-hover">Order Now</a>
+                                    <a class="btn btn--outline-thick btn--sm rounded-full lightbox position-relative btn-3d-hover btn-splash-hover"
+                                        data-autoplay="true" data-vbtype="video" href="https://www.youtube.com/watch?v=aRh_eUQSmIg">
+                                        <span class="pos-vertical-center media-player-icon media-player-icon--sm media-player-icon--fill-grey"> <i class="icon icon-triangle-right-17"></i> 
+                                        </span>
+                                        <span class="ml-30">Watch the video</span>
+                                    </a>
+
+                                </div>
+                            </div>
+                            <!-- end of content -->
+                        </div>
+                    </div>
+                </div>
+                <!-- end of row -->
+            </div>
+            <!-- end of container -->
+            <div class="col-12 col-xl-7 col-lg-9 pos-abs-top-right pr-0 d-none d-xl-block">
+                <div class="hero__block5 ml-auto" style="width: 800px; height: 680px;">
+                    <div class="svg-clipped background-holder--cover background-holder--center">
+                        <!-- Apply your (800px width to 680px height) image here -->
+                        <img class="background-image-holder" src="img/efood.jpg" alt="svg">
+                    </div>
+
+                    <svg height="0" width="0">
+                        <defs>
+                            <clipPath id="svgPath">
+                                <path d="M0,0c0,0,18.2,428.9,283.2,549.5S655.1,598.4,800,680V0H0z"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div> 
+                <!-- this svg background only visible on large device -->
+                <!-- end Of SVG background -->
+            </div>
+            <!-- end of row -->
+        </section>
+        <!-- =========== End of Hero ============ -->
+        
+        <!-- =========== Start of Features ============ -->
+        <section class="space-bottom pt-0 pt-lg-5" id="features">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-9 mx-auto">
+                        <div class="section-title reveal text-center mb-80 mb-sm-50">
+                            <h3 class="mb-3">You Deserve Great Delivery</h3>
+                            <p class="lead">For the generation of our Future. We provide a high quality, safe, cheap and yummy food delivery service to schools individually. We are available to all students bringing joy, and a fully stomach.</p>
+                        </div>
+                        <!-- end of section title -->
+                    </div>
+                    <!-- end of col -->
+                </div>
+                <!-- end of row -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="features features--slider reveal">
+                            <div class="sub-header">
+                                <div class="swipe-tabs">
+                                    <div class="swipe-tab text-left">
+                                        <div class="swipe-tab__inner d-inline-flex flex-column align-items-center text-center">
+                                            <span class="tab__icon">
+                                                <img src="img/icon-drag.png" alt="icon">
+                                            </span>
+                                            <span class="tab__title font-size-21 font-weight-bold">No Extra Fees</span>
+                                        </div>
+                                    </div>
+                                    <!-- end of tab one -->
+                                    <div class="swipe-tab text-center">
+                                        <div class="swipe-tab__inner d-inline-flex flex-column align-items-center text-center">
+                                            <span class="tab__icon d-flex flex-column">
+                                                <img src="img/icon-settings.png" alt="icon">
+                                            </span>
+                                            <span class="tab__title font-size-21 font-weight-bold">Variety of Options</span>
+                                        </div>
+                                    </div>
+                                    <!-- end of two one -->
+
+                                    <div class="swipe-tab text-right">
+                                        <div class="swipe-tab__inner d-inline-flex flex-column align-items-center text-center">
+                                            <span class="tab__icon">
+                                                <img src="img/icon-responsive.png" alt="icon">
+                                            </span>
+                                            <span class="tab__title font-size-21 font-weight-bold">Free on Any Device</span>
+                                        </div>
+                                    </div>
+                                    <!-- end of tab three -->
+                                </div>
+                            </div>
+                            <!-- end of tabs -->
+                            <div class="main-container">
+                                <div class="swipe-tabs-container">
+                                    <div class="swipe-tab-content d-lg-flex justify-content-md-between align-items-center">
+                                        <picture class="features--tab__image">
+                                            <img src="img/sen.jpg" alt="browser-image">
+                                        </picture>
+                                        <div class="tab-content">
+                                            <h4 class="tab-content__title mb-30">Absolutely NO Extra Fees!</h4>
+                                            <ul class="tab-content__list">
+                                                <li>
+                                                    <p>What you see on the menu, is what you pay for. No extra costs for anything.</p>
+                                                </li>
+                                                <li>
+                                                    <p>You no longer have to worry about food delivery being too costly; we deliver on time at no extra charge.</p>
+                                                </li>
+                                            </ul>
+                                            <div class="testimonial">
+                                                <blockquote class="blockquote">
+                                                    “Wow. When I saw 7$ for a Combo, I paid 7$ + tax. Not a single cent more!”
+                                                </blockquote>
+                                                <span class="font-weight-bold">Caleb Vacado, Student at Upper Canada College</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end of first tab content -->
+                                    <div class="swipe-tab-content d-lg-flex justify-content-md-between align-items-center">
+                                        <picture class="features--tab__image">
+                                            <img src="img/pz.jpg" alt="browser-image">
+                                        </picture>
+                                        <div class="tab-content">
+                                            <h4 class="tab-content__title mb-30">Order from any surrounding Restaurants!</h4>
+                                            <ul class="tab-content__list">
+                                                <li>
+                                                    <p>Our company will partner with various number of fastfood restaurants around your school to ensure that your order is both <b>quick </b> and <b>fresh.</b></p>
+                                                </li>
+                                                <li>
+                                                    <p>A restaurant around your area that you want? No problem at all; contact your school Flyte Rep to get them added.</p>
+                                                </li>
+                                            </ul>
+                                            <div class="testimonial">
+                                                <blockquote class="blockquote">
+                                                    “No more wasting 30 minutes getting food. SO FAST. I am blown away. I can finally enjoy my favorite meals at school cheap, quick, and tasty. Awesome!”
+                                                </blockquote>
+                                                <span class="font-weight-bold">Matt Glasglow, Student at St. George Public School</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end of second tab content -->
+                                    <div class="swipe-tab-content d-lg-flex justify-content-md-between align-items-center">
+                                        <picture class="features--tab__image">
+                                            <img src="img/333.png" alt="browser-image">
+                                        </picture>
+                                        <div class="tab-content">
+                                            <h4 class="tab-content__title mb-30">Phone, Computer or Tablet!</h4>
+                                            <ul class="tab-content__list">
+                                                <li>
+                                                    <p>Download our Free App on any device, anytime, anywhere.</p>
+                                                </li>
+                                                <li>
+                                                    <p>Professionally Designed and Built to match the modern user experience..</p>
+                                                </li>
+                                            </ul>
+                                            <div class="testimonial">
+                                                <blockquote class="blockquote">
+                                                    “Flyte is just Clean, Easy, and freaking amazing! There's nothing else to say.”
+                                                </blockquote>
+                                                <span class="font-weight-bold"> Rafe Shipka, Student at University of Toronto</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end of third tab content -->
+                                </div>
+                            </div>
+                            <!-- end of tab/ features items -->
+                        </div>
+                        <!-- end of features -->
+                    </div>
+                    <!-- end of col -->
+                </div>
+                <!-- end of row -->
+            </div>
+            <!-- end of container -->
+
+        </section>
+        <!-- =========== End of Features ============ -->
+
+        <!-- =========== Start of Process ============ -->
+        <section class="space-top bg-color-grey">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-9 mx-auto">
+                        <div class="section-title reveal text-center mb-80 mb-sm-50">
+                            <h3 class="mb-3">How does Flyte Work?</h3>
+                            <p class="lead">Flyte works amazing for any school in any city. If your school is currently not using Flyte, contact us to bring Flyte to your school so that <b>you</b> can experience the <i>"flyte"</i> of the century.</p>
+                        </div>
+                        <!-- end of section title -->
+                    </div>
+                </div>
+                <!-- end of row -->
+                <div class="working-process reveal">
+                    <div class="row space-bottom border-bottom-light">
+                        <div class="col-12 col-md-4">
+                            <div class="working-process-block text-center">
+                                <span class="mb-30 icon-dotted position-relative">
+                                    <i class="icon icon-pin-2"></i>
+                                </span>
+                                <h4 class="font-size-21 mb-10">
+                                    Register a Flyte Account
+                                </h4>
+                                <p>Create a Flyte account for free and register to your specific school.</p>
+                            </div>
+                        </div>
+                        <!-- end of col -->
+                        <div class="col-12 col-md-4">
+                            <div class="working-process-block text-center">
+                                <span class="mb-30 icon-dotted position-relative">
+                                    <i class="icon icon-layout-11"></i>
+                                </span>
+                                <h4 class="font-size-21 mb-10">
+                                    Order from variety of Restaurants
+                                </h4>
+                                <p>Order from our various partnered restaurants at any time and set a date for it to be delivered at school fresh.</p>
+                            </div>
+                        </div>
+                        <!-- end of col -->
+                        <div class="col-12 col-md-4">
+                            <div class="working-process-block text-center">
+                                <span class="mb-30 icon-dotted position-relative">
+                                    <i class="icon icon-spaceship"></i>
+                                </span>
+                                <h4 class="font-size-21 mb-10">
+                                    Get Your Food
+                                </h4>
+                                <p>Our driver will bring all student's food in one central place, just pick up yours fresh and yummy!</p>
+                            </div>
+                        </div>
+                        <!-- end of col -->
+                    </div>
+                    <!-- end of row -->
+                </div>
+                <!-- end of working process -->
+            </div>
+            <!-- end of container -->
+        </section>
+        <!-- =========== End of Process ============ -->
+
+        <!-- =========== Start of Content Block ============ -->
+        <section class="space bg-color-grey">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-6 mb-40 mb-lg-0">
+                        <picture>
+                            <img src="img/bff.jpg" alt="build">
+                        </picture>
+                    </div>
+                    <div class="col-12 col-lg-5 ml-auto reveal">
+                        <h3 class="mb-30">Built for friendships</h3>
+                        <p class="mb-30">Save Time, Effort and Money by ordering using Flyte. Do whatever you want knowing that your food will get to your school right when lunch starts. "Delicious"</p>
+                        <ul class="d-flex mb-30">
+                            <li class="mr-10"><img src="img/clock.png" alt="html5"></li>
+                            <li class="mr-10"><img src="img/bookmark.png" alt="css"></li>
+                            <li><img src="img/car.png" alt="js"></li>
+                        </ul>
+                        <p class="mb-30">Where you are doesn't matter. Flyte is available to students all over the world; bringing delicious food right to your school.
+                        </p>
+                        <a href="#" class="btn btn--underline btn--color-primary btn-text-hover">
+                            <span class="btn__text">Get Flyte for you School Now</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- end of row -->
+            </div>
+            <!-- end of container -->
+        </section>
+        <!-- =========== End of Content Block ============ -->
+
+        <!-- =========== Start of Content Block ============ -->
+        <section class="space-top pb-50">
+            <div class="container position-relative">
+                <div class="background-holder background-holder--circle">
+                    <img src="img/oval.svg" alt="oval" class="background-image-holder">
+                </div>
+                <!-- end of background-holder image -->
+                <div class="row flex-row-reverse">
+                    <div class="col-12 col-lg-6 ml-auto">
+                        <picture>
+                            <img src="img/blocks.png" alt="blocks">
+                        </picture>
+                    </div>
+                    <div class="col-12 col-lg-5 mt-lg-5 mt-0 reveal">
+                        <h3 class="mb-30">Easy For Restaurants</h3>
+                        <p class="mb-50">We will setup everything for restaurants entirely free including our complimentary tablet and software. Our Restaurant platform is easy to navigate, control and customize to increase restaurant revenue..</p>
+                        <a href="#" class="btn btn--underline btn--color-primary btn-text-hover">
+                            <span class="btn__text">Get Flyte For my Restaurant</span>
+                        </a>
+                    </div>
+                    <!-- end of col -->
+                </div>
+                <!-- end of row -->
+            </div>
+            <!-- end of container -->
+        </section>
+        <!-- =========== End of Content Block ============ -->
+
+        <!-- =========== Start of CTA Content Block ============ -->
+        <section>
+            <div class="container">
+                <div class="row mb-100">
+                    <div class="col-12 col-lg-6 mx-auto text-center reveal">
+                        <h3 class="mb-20">Get Flyte for your Restaurant Now</h3>
+                        <p class="mb-40">Flyte has proven to increase restaurant revenue by over 35% per day. Plus - We charge you nothing and set everything up for free.</p>
+                        <a href="#" class="btn rounded-full btn--bg-primary btn-3d-hover btn-splash-hover"><span class="btn__text">Try Flyte For Your Restaurant</span></a>
+                    </div>
+                    <!-- end of col -->
+                </div>
+                <!-- end of row -->
+                <div class="row">
+                    <div class="col-12 col-lg-10 mx-auto text-center reveal">
+                        <picture>
+                            <img src="img/admin-dashboard-1.png" alt="dashboard-image">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- =========== End of CTA Content Block ============ -->
+
+        <!-- =========== Start of Testimonial ============ -->
+        <section class="bg-color-primary space position-relative" id="reviews">
+            <div class="background-holder background-holder--top">
+                <img src="img/testimonial-bg.svg" alt="pattern" class="background-image-holder">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-6 mx-auto">
+                        <div class="section-title reveal text-center mb-80 mb-sm-50">
+                            <h3 class="mb-3">You’re in good hands</h3>
+                            <p class="lead">Our global team of members strive to make your food dreams come true.</p>
+                        </div>
+                        <!-- end of section title -->
+                    </div>
+                </div>
+                <!-- end of row -->
+
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4 d-flex reveal">
+                        <div class="card mb-20 mb-lg-0">
+                            <blockquote class="card-body blockquote pb-30">
+                                <p>I just Love It. Simply Put.</p>
+                            </blockquote>
+                            <div class="card-footer d-flex align-items-center">
+                                <span class="avatar mr-10"><img src="img/t1.png" alt="testimonial"></span>
+                                <span class="body-font-size font-w-600">Martin Jones, Karyote Comp</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of col -->
+                    <div class="col-12 col-md-6 col-lg-4 d-flex reveal">
+                        <div class="card mb-20 mb-lg-0">
+                            <blockquote class="card-body blockquote pb-30">
+                                <p>My son wasted hours of time each day at school deciding what to eat and always ended up spending a lot. Flyte solved this problem and helped both him and our family.</p>
+                            </blockquote>
+                            <div class="card-footer d-flex align-items-center">
+                                <span class="avatar mr-10"><img src="img/t2.png" alt="testimonial"></span>
+                                <span class="body-font-size font-w-600">Lauren Copenski, CloudMates</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of col -->
+                    <div class="col-12 col-md-6 col-lg-4 d-flex reveal">
+                        <div class="card mb-20 mb-lg-0">
+                            <blockquote class="card-body blockquote pb-30">
+                                <p>My 3 kids showed me this one day and now I never have to stress about what I should prepare for my kids for lunch. I can just simply relax. Thank you Flyte.</p>
+                            </blockquote>
+                            <div class="card-footer d-flex align-items-center">
+                                <span class="avatar mr-10"><img src="img/t3.png" alt="testimonial"></span>
+                                <span class="body-font-size font-w-600">Caleb Khatchadorian, Mom</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of col -->
+                </div>
+                <!-- end of row -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="text-center mt-40">
+                            <a href="reviews.html" class="btn btn--underline btn--color-white btn-text-hover">
+                                <span class="btn__text">Check all testimonials <i class="fa fa-caret-right ml-10"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- end of col -->
+                </div>
+                <!-- end of row -->
+                <div class="row mt-100">
+                    <div class="col-12 mx-auto d-flex flex-column flex-md-row justify-content-between text-center reveal">
+                        <!-- <span class="mb-30 mb-md-0"><img src="img/logo-1.png" alt="client"></span>
+                        <span class="mb-30 mb-md-0"><img src="img/dude.png" alt="client"></span> -->
+                        <span class="mb-30 mb-md-0"><img src="img/ucc2.png" alt="client"></span>
+                        <!-- <span class="mb-30 mb-md-0"><img src="img/logo-4.png" alt="client"></span>
+                        <span class="mb-30 mb-md-0"><img src="img/logo-5.png" alt="client"></span> -->
+                    </div>
+                    <!-- end of clients logo col -->
+                </div>
+                <!-- end of clients logo row -->
+            </div>
+            <!-- end of container -->
+        </section>
+        <!-- =========== End of Testimonial ============ -->
+
+
+        <!-- =========== Start of Pricing ============ -->
+        <section class="space bg-color-grey" id="pricing">
+            <div class="background-holder">
+                <img src="img/pricing-bg.svg" alt="pattern" class="background-image-holder">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-6 mx-auto">
+                        <div class="section-title reveal text-center mb-80 mb-sm-50">
+                            <h3 class="mb-3">Your Choice</h3>
+                            <p class="lead">Are you a student and want Flyte. Or are you a restaurant owner and want Flyte. </p>
+                        </div>
+                        <!-- end of section title -->
+                    </div>
+                    <!-- end of col -->
+                </div>
+                <!-- end of row -->
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-6 col-lg-5 col-xl-4 reveal">
+                        <div class="card text-center mb-40">
+                            <div class="header pt-30 pb-30 border-bottom-light">
+                                <h2 class="h1-font color-primary">Students</h2>
+                                <span class="h6-font font-weight-bold">No Extra Fees</span>
+                            </div>
+                            <div class="body pb-40 pt-30 pr-30 pl-30">
+                                <p class="pb-40">Are you a student who loves a good meal that is cheap, fast, fresh and yummy?</p>
+                                <a href="#" class="btn rounded-full btn--outline btn-3d-hover btn-splash-hover">
+                                    <span class="btn__text">Get Flyte Now</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of col -->
+                    <div class="col-12 col-md-6 col-lg-5 col-xl-4 reveal">
+                        <div class="card text-center card--focused mb-40">
+                            <div class="header pt-30 pb-30 border-bottom-light">
+                                <h2 class="h1-font">Retailer</h2>
+                                <span class="h6-font font-weight-bold">No Extra Fees</span>
+                            </div>
+                            <div class="body pb-40 pt-30 pr-30 pl-30">
+                                <p class="pb-40">Are you a restaurant who wants to increase their revenue with no extra costs, and high quality support?</p>
+                                <a href="#" class="btn rounded-full btn--bg-white btn-3d-hover btn-splash-hover">
+                                    <span class="btn__text">Get Flyte Now</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of col -->
+                </div>
+                <!-- end of row -->
+                <div class="row reveal">
+                    <div class="col-12">
+                        <div class="text-center reveal">
+                            <p class="lead mb-10 font-w-400">If you are unsure.</p>
+                            <a href="#" class="btn btn--underline btn--color-dark btn-text-hover">
+                                <span class="btn__text">Contact Us <i class="fa fa-caret-right ml-10"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- end of col -->
+                </div>
+                <!-- end of row -->
+            </div>
+            <!-- end of container -->
+        </section>
+        <!-- =========== End of Pricing ============ -->
+
+        <!-- =========== Start of FAQ ============ -->
+        <section class="space">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-6 mx-auto">
+                        <div class="section-title reveal text-center mb-80 mb-sm-50 reveal">
+                            <h3 class="mb-3">Frequently Asked Questions</h3>
+                            <p class="lead">Want Flyte but you have no idea how to get started? Go to any app store and download our app "Flyte"</p>
+                        </div>
+                        <!-- end of section title -->
+                    </div>
+                    <!-- end of col -->
+                </div>
+                <!-- end of row -->
+                <div class="row justify-content-between">
+                    <div class="col-12 col-xl-11 mx-auto">
+                        <div class="row justify-content-between reveal">
+                            <div class="col-12 col-md-6 mb-40 px-lg-4">
+                                <h5 class="mb-2">Where can I download Flyte?</h5>
+                                <p>Flyte is available to all countries on IOS, Android and the Web. Simply go to any app store and search in Flyte, then download our free app to get started.</p>
+                            </div>
+                            <!-- end of single item -->
+                            <div class="col-12 col-md-6 mb-40 px-lg-4">
+                                <h5 class="mb-2">Do I need to give you my credit card information?</h5>
+                                <p>Flyte stores no payment information, however our restaurant partners need to get paid; so we use Stripe to process our payments and make sure your information is safe, and secure. </p>
+                            </div>
+                            <!-- end of single item -->
+                        </div>
+                        <!-- end of single col -->
+                        <div class="row justify-content-between reveal">
+                            <div class="col-12 col-md-6 mb-40 px-lg-4">
+                                <h5 class="mb-2">When I Sign-Up, my school isn't showing up to choose from?</h5>
+                                <p>Thats because Flyte has not arrived to your schoool yet, but no worries. Send us a quick email of your school name and our team will bring Flyte to your school as soon as possible.</p>
+                            </div>
+                            <!-- end of single item -->
+                            <div class="col-12 col-md-6 mb-40 px-lg-4">
+                                <h5 class="mb-2">I got a wrong order. What do I do?</h5>
+                                <p>Since the restaurants are humans and have to process many orders, mistakes happen from time to time. Just send us a quick email with your school, username, and recipt of the wrong order. We will refund your money back and you can enjoy a free meal.</p>
+                            </div>
+                            <!-- end of single item -->
+                        </div>
+                        <!-- end of single col -->
+                        <div class="row justify-content-between reveal">
+                            <div class="col-12 col-md-6 mb-40 px-lg-4">
+                                <h5 class="mb-2">How do I become a Flyte Driver?</h5>
+                                <p>Flyte is always looking for drivers. To ensure the safety of our clients, you must be a current driver of any major food delivery company and pass our quick identity check. Send us a quick email if you are interested.</p>
+                            </div>
+                            <!-- end of single item -->
+                            <div class="col-12 col-md-6 mb-40 px-lg-4">
+                                <h5 class="mb-2">I am a restaurant parter with Flyte but I haven't received any money for the orders.</h5>
+                                <p>All of our payments to each restaurant partner will be sent out by the end of each week. A full recipt of all orders made that week will be available on your tablet as well as emailed to you. Keep in mind that it may take 3-5 business days for the bank to send the money. If there are any miscalculations, feel free to contact us.</p>
+                            </div>
+                            <!-- end of single item -->
+                        </div>
+                        <!-- end of single col -->
+                    </div>
+                </div>
+                <!-- end of row -->
+                <div class="row">
+                    <div class="col-12 text-md-center mt-20 reveal">
+                        <span>Still have a question? Reach out to us: <a href="mailto:info@flyte.live" class="color-primary"> info@flyte.live</a></span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- =========== End of FAQ ============ -->
+
+        <!-- =========== Start of CTA ============ -->
+        <section class="bg-color-primary space">
+            <div class="background-holder background-holder--contain">
+                <img src="img/cta-bg.png" alt="pattern" class="background-image-holder">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-6 text-center mx-auto reveal">
+                        <h3 class="mb-20">Download Flyte, for free!</h3>
+                        <p class="lead mb-50">Join Students around the world enjoying fast food with no fees at all.</p>
+                        <a href="#" class="btn rounded-full btn--bg-white btn--color-primary btn-3d-hover btn-splash-hover">
+                            <span class="btn__text">Get started</span>
+                        </a>
+                    </div>
+                    <!-- end of col -->
+                </div>
+                <!-- end of row -->
+            </div>
+            <!-- end of container -->
+        </section>
+        <!-- =========== End of CTA ============ -->
+        
+        <!-- =========== Start of footer height emulator============ -->
+        <!-- this height emulator helps to calculate the fixed footer height  -->
+        <div class="height-emulator d-none d-lg-block"></div>
+        <!-- =========== End of footer height emulator============ -->
+
+        <!-- =========== Start of Footer ============ -->
+        <footer class="footer footer--fixed">
+            <div class="background-holder background-holder--contain background-holder--left">
+                <img src="img/logo-overlay-big.png" alt="pattern" class="background-image-holder">
+            </div>
+            <div class="space">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-2 mb-20 mb-lg-0">
+                            <span><a href="index.html"><img src="img/logo-icon-color.png" alt="logo"></a></span>
+                        </div>
+                        <div class="col-6 col-sm-4 col-lg-3 mb-20 mb-sm-0">
+                            <div class="footer-widget">
+                                <h6 class="mb-20">Company</h6>
+                                <ul>
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Careers</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="#">Press</a></li>
+                                    <li><a href="#">Brand Guidelines</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- end of col -->
+                        <div class="col-6 col-sm-4 col-lg-3 mb-20 mb-sm-0">
+                            <div class="footer-widget">
+                                <h6 class="mb-20">Product</h6>
+                                <ul>
+                                    <li><a href="#">Why Flyte?</a></li>
+                                    <li><a href="#">Enterprise</a></li>
+                                    <li><a href="#">Customer Stories</a></li>
+                                    <li><a href="#">Options</a></li>
+                                    <li><a href="#">Security</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- end of col -->
+                        <div class="col-6 col-sm-4 col-lg-3 mb-20 mb-sm-0">
+                            <div class="footer-widget">
+                                <h6 class="mb-20">Resources</h6>
+                                <ul>
+                                    <li><a href="#">Download</a></li>
+                                    <li><a href="#">Help Center</a></li>
+                                    <li><a href="#">Guides</a></li>
+                                    <li><a href="#">Partners</a></li>
+                                    <li><a href="#">Events</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- end of col -->
+                    </div>
+                    <!-- end of row -->
+                </div>
+                <!-- end of container -->
+            </div>
+            <!-- end of main footer -->
+            <div class="bg-color-grey py-4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 d-md-flex justify-content-between align-items-center">
+                            <nav class="nav">
+                                <ul class="d-flex mb-md-0">
+                                    <li><a href="#">Status</a></li>
+                                    <li><a href="#">Privacy & Terms</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                </ul>
+                            </nav>
+                            <!-- end of mini footer nav -->
+                            <div class="d-flex justify-content-between ml-auto">
+                                <div class="lang-selector mr-30 position-relative">
+                                    <button class="lang-selector__button" type="button">
+                                        <img src="img/flag-usa.png" alt="United States" class="flag-image">
+                                        <span>English</span>
+                                        <i class="fa fa-angle-up"></i>
+                                    </button>
+                                    <!-- end of language selector button -->
+
+                                    <ul class="lang-dropdown mb-0">
+                                        <li>
+                                            <a class="lang-dropdown__item d-flex align-items-center" href="#"><img src="img/flag-usa.png"
+                                                    alt="United States" class="flag-image mr-10">English</a>
+                                        </li>
+                                        <li>
+                                            <a class="lang-dropdown__item d-flex align-items-center" href="#"><img src="img/flag-spain.png"
+                                                    alt="United States" class="flag-image mr-10">Spanish</a>
+                                        </li>
+                                        <li>
+                                            <a class="lang-dropdown__item d-flex align-items-center" href="#"><img src="img/flag-france.png"
+                                                    alt="United States" class="flag-image mr-10">France</a>
+                                        </li>
+                                        <li>
+                                            <a class="lang-dropdown__item d-flex align-items-center" href="#"><img src="img/flag-bangladesh.png"
+                                                    alt="United States" class="flag-image mr-10">Bengali</a>
+                                        </li>
+                                    </ul>
+                                    <!-- end of language selector dropdown-->
+                                </div>
+                                <!-- end of language selector -->
+                                <ul class="social-lists d-flex mb-0">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                </ul>
+                                <!-- end of social list -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of container -->
+            </div>
+            <!-- mini footer end -->
+        </footer>
+        <!-- =========== End of Footer ============ -->
+        
+    </div>
+    <!-- =========== End of Main (Body) ============ -->
+    <script src="js/plugins.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
